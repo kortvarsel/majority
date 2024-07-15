@@ -9,7 +9,7 @@ const BorderingCountries = () => {
             <p>BORDERING COUNTRIES</p>
             <div className="border-countries">
                 {selectedCountry?.borders.map((borderCountry, index) => (
-                    <CountryLink borderCountry={borderCountry} index={index} />
+                    <CountryLink key={index} borderCountry={borderCountry} index={index} />
                 ))}
             </div>
         </div>

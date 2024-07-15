@@ -1,7 +1,7 @@
 import CountryDisplay from "../components/CountryDisplay";
 import CountrySelect from "../components/CountrySelect";
 import { CountriesProvider } from "../context/CountriesContext";
-import useLocation from "../hooks.tsx/UseLocation";
+import useLocation from "../hooks/UseLocation";
 
 const CountryPage = () => {
     const savedCountry = localStorage.getItem("countryCode");

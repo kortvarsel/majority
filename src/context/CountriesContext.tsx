@@ -19,6 +19,7 @@ export const CountriesProvider = ({ children, initialCountry }: { children: Reac
     const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
 
     const handleSetSelectedCountry = (index: number) => {
+        localStorage.setItem("countryCode", countries[index].cca2);
         setSelectedCountry(countries[index]);
     }
 

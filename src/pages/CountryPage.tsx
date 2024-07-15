@@ -12,7 +12,7 @@ const CountryPage = () => {
     }
 
     return (
-        <CountriesProvider initialCountry={localCountryCode}>
+        <CountriesProvider initialCountry={savedCountry || localCountryCode}>
             <div className="country-page">
                 <CountrySelect />
                 <CountryDisplay />

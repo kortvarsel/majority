@@ -23,7 +23,7 @@ const useLocation = () => {
 
     const getCountryCode = (pos: GeolocationPosition) => {
         const { latitude, longitude } = pos.coords;
-        fetch(`http://api.geonames.org/countryCodeJSON?lat=${latitude}&lng=${longitude}&username=kvtv`)
+        fetch(`https://secure.geonames.org/countryCodeJSON?lat=${latitude}&lng=${longitude}&username=kvtv`)
             .then(response => response.json())
             .then(data => {
                 setLocalCountryCode(data.countryCode);

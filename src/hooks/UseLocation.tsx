@@ -16,9 +16,7 @@ const useLocation = () => {
         navigator.permissions
             .query({ name: "geolocation" })
             .then(function (result) {
-                if (result.state === "granted") {
-                    navigator.geolocation.getCurrentPosition(getCountryCode, (error) => console.log(error));
-                }
+                navigator.geolocation.getCurrentPosition(getCountryCode, (error) => console.warn(error));
             });
 
     }

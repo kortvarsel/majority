@@ -36,7 +36,7 @@ export const CountriesProvider = ({ children, initialCountry }: { children: Reac
                 setSelectedCountry(countries[index]);
             }
         }
-    }, [initialCountry])
+    }, [initialCountry, countries])
 
     return (
         <CountriesContext.Provider value={{ countries, selectedCountry, handleSetSelectedCountry }}>

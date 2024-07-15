@@ -4,7 +4,7 @@ import { Country } from "../types";
 
 const getLabel = (country: Country) =>
     <div className="label">
-        <img className="label-flag" src={country.flags.svg} />
+        <img className="label-flag" alt={`${country.name.common} flag`} src={country.flags.svg} />
         <span>{country.name.common}</span>
     </div>
 

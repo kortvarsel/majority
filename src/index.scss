@@ -81,7 +81,14 @@ h5 {
 
   @media (max-width: 768px) {
     min-width: 100%;
+    max-width: 100%;
   }
+}
+
+.flag {
+  float: right;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .container-body {

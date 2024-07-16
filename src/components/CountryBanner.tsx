@@ -12,14 +12,16 @@ const CountryBanner = () => {
             <div className="container-title">
                 <CountryName key="name-english" language="English" name={selectedCountry?.name.common} />
                 {Object.entries(selectedCountry?.name.nativeName ?? {}).map(([key, value]) =>
-                    selectedCountry?.languages[key].toLowerCase() !== "english" &&
+                    selectedCountry?.languages[key] && selectedCountry?.languages[key].toLowerCase() !== "english" &&
                     <div style={{ display: "contents" }} key={`name-${selectedCountry?.languages[key]}`}>
                         <CountryNameDivider />
                         <CountryName language={selectedCountry?.languages[key]} name={value.common} />
                     </div>
                 )}
             </div >
-            <img className="container-flag" src={selectedCountry?.flags.png} alt={selectedCountry?.flags.alt} />
+            <div className="container-flag">
+                <img className="flag" src={selectedCountry?.flags.svg} alt={selectedCountry?.flags.alt} />
+            </div>
         </div>
     );
 }
